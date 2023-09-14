@@ -12,7 +12,7 @@
             {{post.body|truncatechars:30|linebreaks}}
         </p>
         <div class="flex justify-end mt-5">
-            <a href="{% url 'blog:post_detail' id=post.id %}" class="text-lg font-medium text-blue-600 " tabindex="0" role="link">View more</a>
+            <a href="{{ post.get_absolute_url }}" class="text-lg font-medium text-blue-600 " tabindex="0" role="link">View more</a>
         </div>
     </div>
     {% endfor %} 
