@@ -1,0 +1,26 @@
+<nav class="w-1/2 mx-auto my-5">
+    <ul class="inline-flex -space-x-px text-sm">
+    {% if page.has_previous %}
+    <li>
+        <a href="?page={{page.previous_page_number}}" class="flex items-center justify-center px-3 h-8 ml-0 leading-tight text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-100 hover:text-gray-700">Previous</a>
+      </li>
+      {% else %}
+      <li>
+        <a class="flex items-center justify-center px-3 h-8 ml-0 leading-tight text-gray-300 bg-white border border-gray-300 rounded-l-lg ">Previous</a>
+      </li>
+    {% endif %}
+
+      <li>
+        <span class="flex items-center justify-center px-3 h-8 cursor-pointer leading-tight text-gray-500 bg-white border border-gray-300 ">Page {{page.number}} of {{page.paginator.num_pages}}</span>
+      </li>
+      {% if page.has_next %}
+      <li>
+        <a href="?page={{page.next_page_number}}" class="flex items-center justify-center px-3 h-8 leading-tight text-gray-500 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-100 hover:text-gray-700 ">Next</a>
+      </li>
+      {% else %}
+      <li>
+        <a class="flex items-center justify-center px-3 h-8 leading-tight text-gray-300 bg-white border border-gray-300 rounded-r-lg">Next</a>
+      </li>
+      {% endif %}
+    </ul>
+  </nav>
